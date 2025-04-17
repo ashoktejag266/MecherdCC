@@ -1,0 +1,51 @@
+.grid-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at bottom, rgba(10, 102, 194, 0.3), rgba(0, 0, 0, 1)),
+              linear-gradient(to top, rgba(10, 102, 194, 0.4), transparent 50%);
+  overflow: hidden;
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* 7 Stars with Varying Brightness */
+.grid-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /* Bright stars */
+    radial-gradient(6px 6px at 7% 23%, rgba(255, 255, 255, 1), transparent),
+    radial-gradient(5px 5px at 42% 67%, rgba(255, 255, 255, 0.9), transparent),
+    
+    /* Medium brightness */
+    radial-gradient(4px 4px at 15% 88%, rgba(255, 255, 255, 0.7), transparent),
+    radial-gradient(6px 6px at 83% 12%, rgba(255, 255, 255, 1), transparent),
+
+    /* Faint stars */
+    radial-gradient(5px 5px at 61% 45%, rgba(255, 255, 255, 0.5), transparent),
+    radial-gradient(4px 4px at 91% 78%, rgba(255, 255, 255, 0.6), transparent),
+    radial-gradient(3px 3px at 28% 54%, rgba(255, 255, 255, 0.4), transparent);
+
+  background-size: cover;
+}
+
+/* Light Glow Effect */
+.grid-background::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 150%;
+  height: 50%;
+  background: radial-gradient(circle at bottom, rgba(10, 102, 194, 0.8), transparent);
+  transform: translateX(-50%);
+  opacity: 0.5;
+  filter: blur(90px);
+}

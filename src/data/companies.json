@@ -1,0 +1,37 @@
+[
+    {
+        "name":"Great Learning",
+        "path": "/companies/GL.jpg",
+        "id":1
+    },
+    {
+        "name":"Blink It",
+        "path": "/companies/blinkit.png",
+        "id":2
+    },
+    {
+        "name":"Apna",
+        "path": "/companies/apna.png",
+        "id":3
+    },
+    {
+        "name":"Vahan",
+        "path": "/companies/Vahan.png",
+        "id":4
+    },
+    {
+        "name":"Ninja Cart",
+        "path": "/companies/Ninja.png",
+        "id":5
+    },
+    {
+        "name":"Comett",
+        "path": "/companies/commet.png",
+        "id":6
+    },
+    {
+        "name":"Frigga Labs",
+        "path": "/companies/frigga.jpg",
+        "id":7
+    }
+]
