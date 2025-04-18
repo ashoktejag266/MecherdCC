@@ -1,5 +1,5 @@
-# Use Node.js 22 for ARM64
-FROM node:22-alpine
+# Development image - using Node.js 20 for ARM64
+FROM node:20-alpine
 
 # Set working directory
 WORKDIR /app
@@ -7,17 +7,18 @@ WORKDIR /app
 # Copy package files
 COPY package*.json ./
 
-# Install dependencies (use npm ci for cleaner installs)
-RUN npm ci
+# Install dependencies
+RUN npm install
 
-# Copy environment variables
+# Copy .env file
 COPY .env ./
 
 # Copy source code
 COPY . .
 
-# Expose the Vite development port (default: 5173)
+# Expose the development server port
+# Note: Vite typically uses port 5173 by default
 EXPOSE 5173
 
-# Start the Vite dev server and allow external access
+# Start the development server
 CMD ["npm", "run", "dev", "--", "--host", "0.0.0.0"]
