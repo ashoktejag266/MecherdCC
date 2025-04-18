@@ -1,5 +1,5 @@
 # Development image - using Node.js 20 for ARM64
-FROM node:20-alpine
+FROM node:22-alpine
 
 # Set working directory
 WORKDIR /app
