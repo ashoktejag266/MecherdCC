@@ -10,6 +10,6 @@ export default defineConfig({
     },
   },
   server: {
-    allowedHosts: ["homelab-mc.njmj5w.easypanel.host", "0.0.0.0"]
+    allowedHosts: ["homelab-mc.njmj5w.easypanel.host", "0.0.0.0", "brilliant-light-production-0775.up.railway.app"]
   }
 })
